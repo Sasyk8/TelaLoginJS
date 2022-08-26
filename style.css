@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Open+Sans:wght@600&display=swap');
+
+body {
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.mainLogin{
+    width: 100vw; /* largagura */
+    height: 100vh; /* altura */
+    background: #201b2c; 
+    display: flex; /* deixa tudo de ladinho */
+    justify-content: center; /* arruma tudo bonitinho no eixo x */
+    align-items: center;
+}
+
+.leftLogin{
+    width: 50vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.leftLogin > h1 {
+    color: #77ffc0;
+    font-size: 2.7vw;
+}
+
+.leftLoginImg{
+    width:35vw;
+}
+
+.rightLogin{
+    width: 50vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.cardLogin{
+    width: 60%; /* usa o tamanho apenas do card login como base */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px; /* margin dentro do componente, o primeiro valor é o y e o segundo x */
+    background: #2f2841;
+    border-radius: 20px; /* bordinha arredondada */
+    box-shadow: 0px 10px 30px #00000056; /* 1- se refere ao x,  2- se refere a y, 3- é o blur, 4- é a cor */
+}
+
+.cardLogin > h1{
+   color: #00ff88; 
+   font-weight: 800;
+   margin: 0;
+}
+
+.textField{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textField > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px; /* apenas um valor funciona pro x e y */
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 30px #00000056;
+    outline: none; /* tira a "caixa" ao redor do input */
+    box-sizing: border-box;
+}
+
+.textField > label{
+    color: #f0ffffde;
+    margin-bottom: 10px; 
+}
+
+.textField > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btnLogin{
+    width: 55%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase; /* deixa a palavra do botao toda em maiuscula */
+    font-weight: 800;
+    letter-spacing: 1px; /* cria um espaçamento entre as letras da palavra */
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer; /* deixa o cursor virar aquele da maozinha */
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media only screen and (max-width: 950px){
+    .cardLogin{
+        width: 85%;
+
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .mainLogin{
+        flex-direction: column;
+    }
+
+    .leftLogin > h1{
+        display: none;
+    }
+
+    .leftLogin{
+        width: 100%;
+        height: auto;
+    }
+
+    .rightLogin{
+        width: 100%;
+        height: auto;
+    }
+
+    .leftLoginImg{
+        width: 50vh;
+    }
+
+    .cardLogin{
+        width: 90%;
+    }
+}
+
